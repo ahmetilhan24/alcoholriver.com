@@ -1,9 +1,10 @@
 .btn {
   height: 30px;
-  border-radius: 3px;
   border: none;
-  background-color: $primary-color-light;
-  font-size: 13px;
-  color: $white;
   cursor: pointer;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px dashed $dark-three;
+  background-color: $white;
+  line-height: 0;
 }

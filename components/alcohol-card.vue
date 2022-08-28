@@ -88,16 +88,13 @@ export default {
   width: calc(25% - 20px);
   margin-bottom: 10px;
   height: 200px;
-  border: 2px solid $dark-one;
+  border: 2px solid $dark-three;
   border-radius: 10px;
   justify-content: space-between;
   padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.221) 0px 2px 8px;
   transition: 0.1s ease;
   background-color: $white;
-  @include small-device {
-    border: 2px solid $dark-three;
-  }
   &--selected {
     border-color: $primary-color;
     transform: scale(1.5);
