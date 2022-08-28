@@ -19,11 +19,18 @@ export default {
   padding: 20px;
   background-color: $gray-three;
   margin-top: 40px;
+  text-align: center;
   h5 {
     @include golden-text(16);
+    @include small-device {
+      @include golden-text(14);
+    }
   }
   p {
     @include golden-text(14);
+    @include small-device {
+      @include golden-text(13);
+    }
     opacity: 0.7;
   }
 }

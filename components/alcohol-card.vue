@@ -24,13 +24,27 @@ export default {
 </script>
 <style lang="scss" scoped>
 .alcohol-card {
-  width: calc(20% - 10px);
+  width: calc(25% - 20px);
   margin: 10px;
   border: 2px solid $dark-one;
   border-radius: 10px;
   justify-content: space-between;
   padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.221) 0px 2px 8px;
+  transition: 0.1s ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  @include large-device {
+    width: calc(33.33% - 20px);
+  }
+  @include small-device {
+    width: calc(50% - 20px);
+  }
+  @include extra-small-device {
+    width: calc(100%);
+  }
   img {
     width: 40px;
     height: 40px;
@@ -43,6 +57,14 @@ export default {
     padding: 8px 0 0 0;
     h2 {
       @include golden-text(22);
+
+      @include medium-device {
+        @include golden-text(20);
+      }
+
+      @include small-device {
+        @include golden-text(18);
+      }
     }
     h2,
     h3,
@@ -60,6 +82,12 @@ export default {
         h3 {
           margin-top: 5px;
           @include golden-text(18);
+          @include medium-device {
+            @include golden-text(17);
+          }
+          @include small-device {
+            @include golden-text(16);
+          }
         }
       }
     }

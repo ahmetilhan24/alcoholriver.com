@@ -26,8 +26,23 @@ export default {
     margin-top: 40px;
     border: 3px solid $dark-three;
     box-shadow: rgba(0, 0, 0, 0.221) 0px 7px 8px;
+    @include medium-device {
+      width: 64px;
+      height: 64px;
+    }
+
+    @include medium-device {
+      width: 60px;
+      height: 60px;
+    }
     img {
       width: 40px;
+      @include medium-device {
+        width: 36px;
+      }
+      @include small-device {
+        width: 32px;
+      }
     }
   }
 }
