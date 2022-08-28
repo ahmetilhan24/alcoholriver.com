@@ -16,7 +16,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .alcohol-listing {
-  margin-top: 80px;
+  margin-top: 120px;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -25,7 +25,7 @@ export default {
   }
   @include medium-device {
     padding: 0 30px;
-    margin-top: 50px;
+    margin-top: 80px;
   }
   @include small-device {
     padding: 0 10px;

@@ -95,6 +95,9 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.221) 0px 2px 8px;
   transition: 0.1s ease;
   background-color: $white;
+  @include small-device {
+    border: 3px solid $dark-three;
+  }
   &--selected {
     border-color: $primary-color;
     transform: scale(1.5);
