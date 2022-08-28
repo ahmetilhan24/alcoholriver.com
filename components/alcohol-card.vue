@@ -94,6 +94,16 @@ export default {
   padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.221) 0px 2px 8px;
   transition: 0.1s ease;
+  background-color: $white;
+  &--selected {
+    border-color: $primary-color;
+    transform: scale(1.5);
+    @include small-device {
+      transform: scale(1);
+      width: 100vw;
+      height: 240px;
+    }
+  }
   cursor: pointer;
   &:hover {
     transform: scale(1.05);

@@ -6,14 +6,21 @@
       </div>
       <span>v1.0.0</span>
       <div class="header-right-menus">
-        <button class="btn">Ne içsem?</button>
+        <button class="btn" @click="whatIDrink">Ne içsem?</button>
       </div>
     </div>
   </header>
 </template>
 <script>
+import { toAlcoholPosition } from '~/plugins/what-i-can.pluign.js'
+
 export default {
   name: 'AppHeader',
+  methods: {
+    whatIDrink() {
+      toAlcoholPosition()
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
