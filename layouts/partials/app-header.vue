@@ -4,9 +4,7 @@
       <div class="header-logo flex--row row--middle--center">
         <img src="@/static/logo.png" alt="" />
       </div>
-      <span class="header-slogan"
-        ><strong>"Alman Saflık Yasasına Göre Kodlanmıştır"</strong></span
-      >
+      <span class="header-app-version"><strong>v1.0.0</strong></span>
       <div class="header-right-menus">
         <button class="btn" @click="whatIDrink">Ne içsem?</button>
       </div>
@@ -30,10 +28,13 @@ export default {
   width: 100%;
   height: 50px;
   background-color: $gray-two;
-  position: sticky;
+  position: fixed;
   top: 0;
   border-bottom: 1px solid $dark-three;
   z-index: 100;
+  @include small-device {
+    border-width: 3px;
+  }
   &__content {
     justify-content: space-between;
     padding: 0;
@@ -65,9 +66,11 @@ export default {
         height: 64px;
       }
 
-      @include medium-device {
+      @include small-device {
         width: 60px;
         height: 60px;
+        box-shadow: none;
+        border-width: 3px;
       }
       img {
         width: 40px;
@@ -79,7 +82,7 @@ export default {
         }
       }
     }
-    .header-slogan {
+    .header-app-version {
       font-size: 12px;
       font-style: italic;
     }
