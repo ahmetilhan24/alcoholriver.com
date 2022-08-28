@@ -4,7 +4,9 @@
       <div class="header-logo flex--row row--middle--center">
         <img src="@/static/logo.png" alt="" />
       </div>
-      <span>v1.0.0</span>
+      <span class="header-slogan"
+        ><strong>"Alman Saflık Yasasına Göre Kodlanmıştır"</strong></span
+      >
       <div class="header-right-menus">
         <button class="btn" @click="whatIDrink">Ne içsem?</button>
       </div>
@@ -76,6 +78,10 @@ export default {
           width: 32px;
         }
       }
+    }
+    .header-slogan {
+      font-size: 12px;
+      font-style: italic;
     }
   }
 }

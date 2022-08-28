@@ -6,9 +6,21 @@
     </h5>
     <br />
     <p>
-      <i>"Alman <strong>Saflık Yasasına</strong> Göre Kodlanmıştır"</i>
+      <i
+        >"Alman
+        <strong
+          ><u>
+            <a
+              target="BLANK"
+              href="https://en.wikipedia.org/wiki/Reinheitsgebot"
+              >Saflık Yasasına</a
+            >
+          </u></strong
+        >
+        Göre Kodlanmıştır"</i
+      >
     </p>
-    <a href="https://piizapp.com/"
+    <a href="https://piizapp.com/" class="report-for-piizaap"
       >Alcohol data from <strong>Piizapp</strong></a
     >
   </footer>
@@ -38,7 +50,7 @@ export default {
     }
     opacity: 0.7;
   }
-  a {
+  .report-for-piizaap {
     margin-top: 20px;
     font-size: 12px;
   }

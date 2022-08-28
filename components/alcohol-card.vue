@@ -131,6 +131,7 @@ export default {
       width: 100%;
       height: 50px;
       text-align: center;
+      padding: 0 8px;
       h2 {
         display: -webkit-box;
         -webkit-line-clamp: 2;
