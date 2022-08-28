@@ -1,6 +1,7 @@
 <template>
-  <div class="default-layout">
+  <div class="default-layout flex--column column--middle--center">
     <app-header />
+    <router-view />
   </div>
 </template>
 <script>
