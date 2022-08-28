@@ -25,6 +25,26 @@
       alt=""
       v-if="data.category === ALCOHOL_CATEGORIES.wine"
     />
+    <img
+      src="@/data/alcohol-icons/tequila.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.tequila"
+    />
+    <img
+      src="@/data/alcohol-icons/whiskey.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.whiskey"
+    />
+    <img
+      src="@/data/alcohol-icons/vodka.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.vodka"
+    />
+    <img
+      src="@/data/alcohol-icons/cin.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.cin"
+    />
     <div class="alcohol-card__info flex--column column--middle--center">
       <div class="alcohol-title flex--row row--middle--center">
         <h2>{{ data?.name }}</h2>
@@ -34,7 +54,10 @@
           <h3>{{ data.price }} <strong>₺</strong></h3>
         </div>
         <div class="alcohol-info__box flex--column column--middle--center">
-          <h3>7 <strong>%</strong></h3>
+          <h3>
+            {{ data.alcoholPercentage ? data.alcoholPercentage : NaN }}
+            <strong>%</strong>
+          </h3>
         </div>
         <div class="alcohol-info__box flex--column column--middle--center">
           <h3>🤪</h3>
@@ -85,7 +108,6 @@ export default {
     width: calc(100%);
   }
   img {
-    width: 40px;
     height: 40px;
   }
   &__info {

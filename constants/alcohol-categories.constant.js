@@ -4,4 +4,8 @@ export const ALCOHOL_CATEGORIES = {
   liquor: 'likor',
   raki: 'raki',
   wine: 'sarap',
+  tequila: 'tekila',
+  whiskey: 'viski',
+  vodka: 'votka',
+  cin: 'cin',
 }
