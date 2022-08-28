@@ -1,5 +1,5 @@
 <template>
-  <Tutorial />
+  <h1>asdjaskd</h1>
 </template>
 
 <script>
