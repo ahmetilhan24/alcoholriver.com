@@ -24,7 +24,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: [
+    '@/assets/styles/vendor/reset.css',
+    '@/assets/styles/vendor/flex-classes.css',
+    // SCSS file in the project
+    '@/assets/styles/sass/_theme.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -37,7 +43,15 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
   ],
-
+  styleResources: {
+    // your settings here
+    scss: [
+      '@/assets/styles/sass/_colors.scss',
+      '@/assets/styles/sass/_animations.scss',
+      '@/assets/styles/sass/_variables.scss',
+      '@/assets/styles/sass/_mixins.scss',
+    ],
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
