@@ -1,15 +1,15 @@
 * {
-    box-sizing: border-box;
-    outline: none;
-  }
-  body {
-    font-family: $roboto-slab;
-    font-size: 15px;
-    font-weight: normal;
-    font-stretch: normal;
-    color: $dark-one;
-  }
-  :disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: $roboto-font;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  color: $dark-one;
+}
+:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
