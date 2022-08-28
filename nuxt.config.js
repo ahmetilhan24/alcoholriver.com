@@ -66,6 +66,10 @@ export default {
         name: 'theme-color',
         content: '#ffffff',
       },
+      {
+        name: 'google',
+        content: 'notranslate',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },

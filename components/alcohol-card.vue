@@ -96,7 +96,7 @@ export default {
   transition: 0.1s ease;
   background-color: $white;
   @include small-device {
-    border: 3px solid $dark-three;
+    border: 2px solid $dark-three;
   }
   &--selected {
     border-color: $primary-color;

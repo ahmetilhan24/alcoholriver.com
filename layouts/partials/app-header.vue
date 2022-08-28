@@ -6,7 +6,7 @@
       </div>
       <span class="header-app-version"><strong>v1.0.0</strong></span>
       <div class="header-right-menus">
-        <button class="btn" @click="whatIDrink">Ne içsem?</button>
+        <button class="btn" @click="whatIDrink">🍺</button>
       </div>
     </div>
   </header>
@@ -33,7 +33,7 @@ export default {
   border-bottom: 1px solid $dark-three;
   z-index: 100;
   @include small-device {
-    border-width: 3px;
+    border-width: 2px;
   }
   &__content {
     justify-content: space-between;
@@ -70,7 +70,7 @@ export default {
         width: 60px;
         height: 60px;
         box-shadow: none;
-        border-width: 3px;
+        border-width: 2px;
       }
       img {
         width: 40px;
@@ -85,6 +85,17 @@ export default {
     .header-app-version {
       font-size: 12px;
       font-style: italic;
+    }
+    .header-right-menus {
+      button {
+        width: 30px;
+        border-radius: 50%;
+        border: 1px dashed $dark-three;
+        background-color: $white;
+        stroke-dasharray: 100;
+        animation: dash 5s linear;
+        line-height: 0;
+      }
     }
   }
 }
