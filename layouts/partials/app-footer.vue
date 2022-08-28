@@ -5,7 +5,9 @@
       <i>Tüm alkol severlere armağan edilmiştir.</i>
     </h5>
     <br />
-    <p><i>"Ne kadar içersen iç, başın döner. Gidenler değil!"</i></p>
+    <p>
+      <i>"Alman <strong>Saflık Yasasına</strong> Göre Kodlanmıştır"</i>
+    </p>
   </footer>
 </template>
 <script>

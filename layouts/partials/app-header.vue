@@ -18,6 +18,7 @@ export default {
   position: sticky;
   top: 0;
   border-bottom: 1px solid $dark-three;
+  z-index: 100;
   &__logo {
     width: 70px;
     height: 70px;

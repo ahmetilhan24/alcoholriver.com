@@ -1,11 +1,17 @@
 <template>
   <section class="alcohol-listing flex--row row--middle--center">
-    <alcohol-card v-for="item in 40" :key="item" />
+    <alcohol-card v-for="item in alcoholsData" :key="item.name" :data="item" />
   </section>
 </template>
 <script>
+import alcoholsData from '@/data/alcohols/alcohols.json'
 export default {
   name: 'AlcoholListing',
+  data() {
+    return {
+      alcoholsData,
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>

@@ -1,11 +1,37 @@
 <template>
   <article class="alcohol-card flex--column column--middle--center">
-    <img src="@/data/alcohol-icons/beer-icon.svg" alt="" />
+    <img
+      src="@/data/alcohol-icons/beer.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.beer"
+    />
+    <img
+      src="@/data/alcohol-icons/cocktail.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.cocktail"
+    />
+    <img
+      src="@/data/alcohol-icons/liquor.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.liquor"
+    />
+    <img
+      src="@/data/alcohol-icons/raki.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.raki"
+    />
+    <img
+      src="@/data/alcohol-icons/wine.svg"
+      alt=""
+      v-if="data.category === ALCOHOL_CATEGORIES.wine"
+    />
     <div class="alcohol-card__info flex--column column--middle--center">
-      <h2>Bira</h2>
+      <div class="alcohol-title flex--row row--middle--center">
+        <h2>{{ data?.name }}</h2>
+      </div>
       <div class="alcohol-info flex--row row--middle--center">
         <div class="alcohol-info__box flex--column column--middle--center">
-          <h3>36 <strong>₺</strong></h3>
+          <h3>{{ data.price }} <strong>₺</strong></h3>
         </div>
         <div class="alcohol-info__box flex--column column--middle--center">
           <h3>7 <strong>%</strong></h3>
@@ -18,14 +44,27 @@
   </article>
 </template>
 <script>
+import { ALCOHOL_CATEGORIES } from '@/constants/alcohol-categories.constant'
 export default {
   name: 'AlcoholCard',
+  props: {
+    data: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  data() {
+    return {
+      ALCOHOL_CATEGORIES,
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>
 .alcohol-card {
   width: calc(25% - 20px);
   margin: 10px;
+  height: 200px;
   border: 2px solid $dark-one;
   border-radius: 10px;
   justify-content: space-between;
@@ -51,25 +90,35 @@ export default {
   }
   &__info {
     width: 100%;
-    background-color: $gray-two;
-    border-radius: 5px;
+    height: 70%;
     margin-top: 15px;
     padding: 8px 0 0 0;
-    h2 {
-      @include golden-text(22);
+    .alcohol-title {
+      background-color: $gray-two;
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      h2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @include golden-text(14);
 
-      @include medium-device {
-        @include golden-text(20);
-      }
+        @include medium-device {
+          @include golden-text(14);
+        }
 
-      @include small-device {
-        @include golden-text(18);
+        @include small-device {
+          @include golden-text(14);
+        }
       }
     }
+
     h2,
     h3,
     h4 {
-      font-family: $noto-font;
       font-weight: 800;
     }
     .alcohol-info {
