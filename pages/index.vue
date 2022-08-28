@@ -14,5 +14,6 @@ export default {
 <style lang="scss" scoped>
 .index-page {
   width: 100%;
+  max-width: $screen-padding;
 }
 </style>

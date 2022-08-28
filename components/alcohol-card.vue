@@ -86,7 +86,7 @@ export default {
 <style lang="scss" scoped>
 .alcohol-card {
   width: calc(25% - 20px);
-  margin: 10px;
+  margin-bottom: 10px;
   height: 200px;
   border: 2px solid $dark-one;
   border-radius: 10px;
@@ -99,10 +99,10 @@ export default {
     transform: scale(1.05);
   }
   @include large-device {
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 12px);
   }
   @include small-device {
-    width: calc(50% - 20px);
+    width: calc(50% - 8px);
   }
   @include extra-small-device {
     width: calc(100%);
