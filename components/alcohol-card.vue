@@ -122,6 +122,8 @@ export default {
   }
   img {
     height: 40px;
+    width: 40px;
+    object-fit: cover;
   }
   &__info {
     width: 100%;
@@ -163,7 +165,7 @@ export default {
         width: 33.33%;
         background-color: $white;
         padding: 10px 0;
-        border: 1px solid $gray-two;
+        border: 2px solid $gray-two;
         h3 {
           margin-top: 5px;
           @include golden-text(18);
