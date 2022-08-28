@@ -8,6 +8,9 @@
     <p>
       <i>"Alman <strong>Saflık Yasasına</strong> Göre Kodlanmıştır"</i>
     </p>
+    <a href="https://piizapp.com/"
+      >Alcohol data from <strong>Piizapp</strong></a
+    >
   </footer>
 </template>
 <script>
@@ -34,6 +37,10 @@ export default {
       @include golden-text(13);
     }
     opacity: 0.7;
+  }
+  a {
+    margin-top: 20px;
+    font-size: 12px;
   }
 }
 </style>
