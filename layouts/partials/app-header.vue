@@ -38,6 +38,9 @@ export default {
     whatIDrink() {
       toAlcoholPosition()
     },
+    searchModalOpen() {
+      this.$store.commit('modules/common/setSearchModalVisible', true)
+    },
   },
 }
 </script>
