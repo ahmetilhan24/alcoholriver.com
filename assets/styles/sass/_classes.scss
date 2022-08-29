@@ -10,8 +10,20 @@
 }
 .modal {
   width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: 2222;
-  bottom: 0;
+  top: 0;
   left: 0;
+}
+
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }

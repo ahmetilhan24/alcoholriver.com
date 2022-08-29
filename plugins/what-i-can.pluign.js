@@ -24,6 +24,8 @@ export const toAlcoholPosition = () => {
       setTimeout(() => {
         element.classList.remove(SELECTED_ITEM.class)
       }, 3000)
+    } else {
+      toAlcoholPosition()
     }
   }
 }

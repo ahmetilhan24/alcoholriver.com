@@ -6,7 +6,9 @@
 
     <!--Modals-->
     <div class="modals">
-      <SearchModal v-if="isSearchModalVisible" />
+      <transition>
+        <search-modal v-if="isSearchModalVisible" />
+      </transition>
     </div>
   </div>
 </template>

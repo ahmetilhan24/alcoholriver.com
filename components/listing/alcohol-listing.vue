@@ -5,7 +5,7 @@
       :key="item.name.toLowerCase()"
       :data="item"
     />
-    <template>
+    <template v-if="!alcoholsData.length">
       <div class="not-result flex--column column--middle--center">
         <img src="@/static/logo.png" alt="" />
         <p>Böyle bir alkol yok...</p>
@@ -30,11 +30,9 @@ export default {
   },
   watch: {
     searchQuery(newVal) {
-      setTimeout(() => {
-        this.alcoholsData = alcoholsData.filter((item) =>
-          item.name.toLowerCase().trim().includes(newVal.toLowerCase())
-        )
-      }, 500)
+      this.alcoholsData = alcoholsData.filter((item) =>
+        item.name.toLowerCase().includes(newVal.toLowerCase())
+      )
     },
   },
 }
@@ -45,7 +43,7 @@ export default {
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-height: calc(100vh - 320px);
+  min-height: calc(100vh - 350px);
   @include large-device {
     padding: 0 50px;
   }

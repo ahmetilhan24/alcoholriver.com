@@ -1,9 +1,6 @@
 <template>
-  <div class="modal">
-    <div
-      id="modal_content"
-      class="modal__content flex--row row--middle--center"
-    >
+  <div id="modal" class="modal">
+    <div class="modal__content flex--row row--middle--center">
       <input type="text" placeholder="Alkol ara" v-model="searchQuery" />
     </div>
   </div>
@@ -30,7 +27,7 @@ export default {
       const _t = this
       if (process.client) {
         window.addEventListener('click', function (e) {
-          if (e.target.id !== 'modal_content' || !e.target.id) {
+          if (e.target.id === 'modal') {
             _t.$store.commit('modules/common/setSearchModalVisible', false)
           }
         })
@@ -42,10 +39,12 @@ export default {
 
 <style lang="scss" scoped>
 .modal {
-  height: 60px;
   &__content {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     height: 100%;
+    height: 60px;
     background-color: $white;
     box-shadow: 0 -2px 20px 0px rgba(0, 0, 0, 0.201);
     padding: 9px;
