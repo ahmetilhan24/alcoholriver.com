@@ -1,5 +1,5 @@
 <template>
-  <section class="alcohol-listing flex--row row--middle--center">
+  <section class="alcohol-listing flex--row row--tp--center">
     <alcohol-card
       v-for="item in alcoholsData"
       :key="item.name.toLowerCase()"
