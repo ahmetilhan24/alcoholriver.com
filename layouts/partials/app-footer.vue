@@ -20,7 +20,7 @@
         Göre Kodlanmıştır"</i
       >
     </p>
-    <a href="https://piizapp.com/" class="report-for-piizaap"
+    <a href="https://piizapp.com/" target="BLANK" class="report-for-piizaap"
       >Alcohol data from <strong>Piizapp</strong></a
     >
   </footer>
