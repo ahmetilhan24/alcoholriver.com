@@ -53,6 +53,9 @@ export default {
   .report-for-piizaap {
     margin-top: 20px;
     font-size: 12px;
+    strong {
+      font-style: italic;
+    }
   }
 }
 </style>
